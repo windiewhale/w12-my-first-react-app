@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import AppTwo from './apptwo'
-import reportWebVitals from './reportWebVitals';
+import Beers from './components/Beers'
+import Header from './components/Header'
+import data from './data'
 
+/* console.log(data.cards); */
+/* console.log(<Beers list={data.cards} />); */
+
+//reactDOM felel azért hogy html kóddá renderelje a js objektumot ami a jsx ből érkezett
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <AppTwo />
+    <Header logo={data.logo} />
+    <Beers list={data.cards} />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
